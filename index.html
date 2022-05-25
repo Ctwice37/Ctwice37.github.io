@@ -5,21 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charles Carpenter</title>
+
+<style>
+  #Faceimg{
+    border-radius: 100%;
+  }
+
+  #Bannerimg{
+    height: auto; 
+    width: auto;
+    position: absolute;
+    
+    size: 0%;
+    display: block
+  }
+
+  .parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  
+}
+
+.image2 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  
+}
+</style>
+
 </head>
 
 <body>
 
-  <img src="photo/IMG_4723.jpg" alt="MyFace"/>
+<div class="parent">
+  <img class="img1" src="photo/javascript-logo.jpg" alt="MyBanner" id="Bannerimg"/>
+  <img class="image2"src="photo/IMG_4723.jpg" alt="MyFace" id="Faceimg"/>
+</div>
 
+  
+<div>
   <h1>Charles Carpenter</h1>
-
+</div>
   <ul>
-    <li>W1D1 -- HTML</li>
-    <li>W1D2 -- CSS</li>
-    <li>W1D3 -- Widgets</li>
-    <li>W1D4 -- Javascipt</li>
-    <li>W1D5 -- DOM</li>
-    <li>W1D6 -- REST/Stread</li>
+
+    <li><a href="#">W1D1 - Home Page</a></li>
+    <li><a href="AboutMe.html">W1D2 - About Me </a></li>
+    <li><a href="#">W1D3 - </a></li>
+    <li><a href="#">W1D4 - </a></li>
+    <li><a href="#">W1D5 - </a></li>
+    <li><a href="#">W1D6 - </a></li>
+
   </ul>
 
 
