@@ -1,0 +1,61 @@
+h1  {
+    color: #A4A400;
+    text-align:center;
+    background: #F0F0F0;
+    font-family: Lucinda Sans Unicode, Helvetica, Arial, Helvetica, sans-serif;
+    font-size: 22pt;
+    font-weight: bold;
+    text-decoration: underline;     
+}
+
+
+h2  {
+    color: #A4A400;
+    text-align:left;
+    background: #F0F0F0;
+    font-size: 18pt;
+    text-decoration: underline;         
+}
+
+
+body {
+    background-color: white;
+    color: #404040;
+    font-size: 11;
+    font-family: Georgia, Garamond, serif;
+
+}
+
+link {
+       color: #A4A400;
+}
+
+p   {
+    margin: auto;
+}
+
+div span {
+    text-decoration: underline;
+  }
+
+li > span {
+    font-weight: bold;
+    
+}
+
+#comments{
+    font-style: italic;
+    background-color: #FFFFA8;
+    margin-left: 40pt;
+    margin-bottom: 20pt;
+    
+    
+}
+#preformatted {
+    font-family: monospace;
+    white-space: pre;
+    
+}
+
+
+
