@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    body {
+        margin: 0
+    }
+    header {
+        padding: 30px;
+        text-align: center;
+        background: #1abc9c;
+        color: white;
+        font-size: 20px;
+      }
+      
+      
+      
+      #div1 {
+        width: 100px;
+        float: left;
+        color:red;
+        padding-bottom:5px;
+        padding-right:5px;
+        padding-left:5px;
+        padding-top:5px;
+
+        background-color: aqua;
+        border-radius: 10%;
+        border: 1px solid;
+        margin-top: -20px; 
+      }
+
+      form {
+          
+           display: inline-block; 
+           margin: 20px;
+           padding: 10PX;
+           border-radius: 10px;
+           border: 2px solid; 
+           height:fit-content;
+           width: fit-content;
+           
+
+        }
+
+      form > #list{
+          display: flex;
+          margin: 10px;
+          padding: 20px;
+          height: 10px;
+          width: 100p;
+          border: 2px solid;
+          height:fit-content;
+           width: fit-content;
+
+      }  
+        
+
+      </style>
+
+<script>
+var array = []
+var show = false;
+
+function addToList(){
+       
+       let x = document.getElementById("listItem").value;
+
+       array.push(x)
+       console.log("added to list: " + array)   
+       
+   }
+
+function printdoc(){
+    
+// if(document.getElementById("userList")==null){
+    
+//     document.createElement("ul").setAttribute("id", "userList")
+// }
+
+
+let ul = document.getElementById("userList");
+let list = document.createElement("ul")
+
+for (let text of array) {
+    let item = document.createElement("li");
+    item.innerHTML = text;
+    list.append(item)
+}
+document.getElementById("listDiv").append(list)
+
+array = []
+console.log("array after print:" + array)
+
+}
+
+function createButtons(){
+        let x = document.createElement("button");
+        x.setAttribute("color", "blue", "id","listItem");
+        x.innerHTML = "I'm New!";
+        let newDiv = document.createElement("div");
+        newDiv.setAttribute("style", "margin: 5px");
+        newDiv.append(x);
+        
+        document.getElementById('buttonDiv').append(newDiv);
+    }
+       
+function showHide(){
+    
+    if(show){
+        document.getElementById("formID").style.display = "none"
+        show = false;
+    }else{
+        document.getElementById("formID").style.display = "block";
+        show = true;
+
+    }
+}
+
+function removeElement(){
+    var element = document.getElementById("idRemove");
+	element.parentNode.removeChild(element);
+}
+
+
+</script>
+
+
+</head>
+<body>
+
+<header  id="header1"; style="display: grid; grid-template-columns: 50px 50px 50px; justify-content: space-between; margin-right: 10px; margin-bottom: 30px;" >
+
+    <div class="container" id="div1"">
+        <a href="http://www.google.com">Google</a> </div>
+        <div class="container" id="div1"">
+            <a href="http://www.google.com">Google</a> </div>
+            <div class="container" id="div1"">
+                <a href="http://www.google.com">Google</a> </div>
+      
+
+</header>
+
+
+<button onclick="showHide()">Toggle Form</button>
+
+
+
+
+<hr><hr style="margin-bottom: 30;">
+
+<form id="formID">  
+    <input type="button" value="createButtons" onclick="createButtons()">
+    <input type="button" name="removeText" id="removeText" value="RemoveText" onclick="removeElement()">
+        <div id="list" style="display: flex;">
+            <input type="text" name="listItem" id="listItem">
+            <input type="button" name="adding" id="addingItem" value="add" onclick="addToList()">
+            <input type="button" name="printList" id="printList" value="Print" onclick="printdoc()">
+           
+        </div>
+</form>
+
+<div id="buttonDiv" style="padding: 10px; margin:20px; border: 1px solid; width:fit-content;"></div>
+<div id="listDiv" style="padding: 10px; margin:20px; border: 1px solid; width:fit-content;"></div>
+
+<div id="idRemove" style="text-align:center"> This text should be removed</div>
+</div>
+    
+</body>
+</html>
