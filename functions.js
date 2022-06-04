@@ -118,8 +118,7 @@ let arry = [{name: "peter", salary: 100},
 
 console.log([3,6,777,9].reduce(function(prev, element,index,array){
     return (prev>element)?prev:element;
-},0));
-
+},0)
 
 
 
