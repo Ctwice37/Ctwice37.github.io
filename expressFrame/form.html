@@ -20,17 +20,12 @@
 
     <script>
 
-        function submit(){
-           let x = document.getElementsByTagName('label').length
-           console.log(x)
-       
-           }
         
     </script>
 </head>
 <body>
 
-    <form action="/display.html" method="post">
+    <form action="display" method="post">
 
         <label for="text ">Text</label>
         <input type="text" placeholder="textHere" name="text1">
@@ -43,17 +38,17 @@
         <input type="checkbox" id="box1" name="checkbox1">
         <br>
         <label for="checkbox">box2</label>  
-        <input type="checkbox" id="box2" name="checkbox2">
+        <input type="checkbox" id="box2" name="checkbox1">
         <br>
         <label for="checkbox">box3</label>  
-        <input type="checkbox" id="box3" name="checkbox3">
+        <input type="checkbox" id="box3" name="checkbox1">
         
         <br><br>
        
         </div>
 
         
-        <input type="submit" onclick="submit()">
+        <input type="submit">
     </form>
     
 </body>
