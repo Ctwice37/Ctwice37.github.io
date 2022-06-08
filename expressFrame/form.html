@@ -5,10 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        form {
+            display: block;
+            border-radius: 5px;
+            border: 2px dotted;
+            padding: 30px
+        }
+
+        form > * {
+            margin: 20px;
+        }
+    </style>
+
+    <script>
+
+        function submit(){
+           let x = document.getElementsByTagName('label').length
+           console.log(x)
+       
+           }
+        
+    </script>
 </head>
 <body>
 
-    <form action="/form" ></form>
+    <form action="/display.html" method="post">
+
+        <label for="text ">Text</label>
+        <input type="text" placeholder="textHere" name="text1">
+        <br>
+        <label for="radio">radio</label>
+        <input type="radio" name="radio">
+        <br>
+        <div style="border: 1px solid;">
+        <label for="checkbox">box1</label>  
+        <input type="checkbox" id="box1" name="checkbox1">
+        <br>
+        <label for="checkbox">box2</label>  
+        <input type="checkbox" id="box2" name="checkbox2">
+        <br>
+        <label for="checkbox">box3</label>  
+        <input type="checkbox" id="box3" name="checkbox3">
+        
+        <br><br>
+       
+        </div>
+
+        
+        <input type="submit" onclick="submit()">
+    </form>
     
 </body>
 </html>
